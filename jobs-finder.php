@@ -4,7 +4,7 @@ Plugin Name: Jobs Finder
 Plugin URI: http://www.onlinerel.com/wordpress-plugins/
 Description: Plugin "Jobs Finder" gives visitors the opportunity to more than 1 million offer of employment.
 Jobs search for U.S., Canada, UK, Australia
-Version: 1.2
+Version: 1.3
 Author: A.Kilius
 Author URI: http://www.onlinerel.com/wordpress-plugins/
 License: GPL2
@@ -131,6 +131,11 @@ function jobs_finder_options() {
 Jobs search for U.S., Canada, UK, Australia</b> </p>
 <p> <h3>Add the widget "Jobs Finder"  to your sidebar from  <a href="<? echo "./widgets.php";?>"> Appearance->Widgets</a>  and configure the widget options.</h3></p>
  <hr /> <hr />
+ <h2>Blog Promotion</h2>
+<p><b>If you produce original news or entertainment content, you can tap into one of the most technologically advanced traffic exchanges among blogs! Start using our Blog Promotion plugin on your site and receive 150%-300% extra traffic free! 
+Idea is simple - the more traffic you send to us, the more we can send you back.</b> </p>
+ <h3>Get plugin <a target="_blank" href="http://wordpress.org/extend/plugins/blog-promotion/">Blog Promotion</h3></a> 
+ <hr />
  <h2>Real Estate Finder</h2>
 <p><b>Plugin "Real Estate Finder" gives visitors the opportunity to use a large database of real estate.
 Real estate search for U.S., Canada, UK, Australia</b> </p>
