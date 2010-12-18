@@ -1,7 +1,7 @@
 === Jobs Finder ===
 Contributors: allis741 
 Donate link: http://www.onlinerel.com/wordpress-plugins/
-Tags: widget, job vacancies, sidebar, employment, jobs, career, work from home, promote, SEO, feed, rss, popular
+Tags: widget, job vacancies, sidebar, employment, jobs, job, career, work from home, promote, SEO, feed, rss, popular
 Requires at least: 2.5
 Tested up to: 3.0.3
 Stable tag: trunk
@@ -36,7 +36,7 @@ Please see <a href="http://www.onlinerel.com/wordpress-plugins/">FAQ</a>.
 
 == Changelog ==
 
- = 1.3 =
+ = 1.3.0 =
 Changed works upto 3.0.3 WP 
 
  = 1.2 =
