@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Jobs Finder
-Version: 1.3.0
+Version: 1.3.1
 Plugin URI: http://www.onlinerel.com/wordpress-plugins/
 Description: Plugin "Jobs Finder" gives visitors the opportunity to more than 1 million offer of employment.
 Jobs search for U.S., Canada, UK, Australia
