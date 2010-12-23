@@ -6,8 +6,7 @@ Requires at least: 2.5
 Tested up to: 3.0.3
 Stable tag: trunk
 
-Plugin "Jobs Finder" gives visitors the opportunity to more than 1 million offer of employment.
-Jobs search for U.S., Canada, UK, Australia
+Plugin "Jobs Finder" gives visitors the opportunity to more than 1 million offer of employment. Jobs search for U.S., Canada, UK, Australia
  
 == Description ==
 
