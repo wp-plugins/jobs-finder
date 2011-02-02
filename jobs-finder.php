@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Jobs Finder
-Version: 1.4
+Version: 1.5
 Plugin URI: http://www.onlinerel.com/wordpress-plugins/
 Description: Plugin "Jobs Finder" gives visitors the opportunity to more than 1 million offer of employment.
 Jobs search for U.S., Canada, UK, Australia
@@ -15,23 +15,14 @@ define(jobs_finder_MAX_SHOWN_ITEMS, 6);
 
 function jobs_finder_widget_ShowRss($args)
 {
-	//@ini_set('allow_url_fopen', 1);	
-	if( file_exists( ABSPATH . WPINC . '/rss.php') ) {
-		require_once(ABSPATH . WPINC . '/rss.php');		
-	} else {
-		require_once(ABSPATH . WPINC . '/rss-functions.php');
-	}
-	
 	$options = get_option('jobs_finder_widget');
-
 	if( $options == false ) {
 		$options[ 'jobs_finder_widget_url_title' ] = jobs_finder_TITLE;
 		$options[ 'jobs_finder_widget_RSS_count_items' ] = jobs_finder_MAX_SHOWN_ITEMS;
 	}
 
- $RSSurl = jobs_finder_URL_RSS_DEFAULT;
-	$messages = fetch_rss($RSSurl);
-	$title = $options[ 'jobs_finder_widget_url_title' ];
+$feed = jobs_finder_URL_RSS_DEFAULT;
+		$title = $options[ 'jobs_finder_widget_url_title' ];
 $output = '<!-- Jobs Finder:  http://www.onlinerel.com/wordpress-plugins/ -->';
 $output .= '<form name="forma" method="post" action="http://jobs.onlinerel.com/jobs-search/" target="_blank">
 <b>Country: </b>
@@ -52,26 +43,31 @@ $output .= '" /> <br />
 $output .= '" /> <br />
 <center><input type="submit" name="submit" class="submit" value="Search" /></center> </form><br />';
 // end search form
-	$messages_count = count($messages->items);
-	if($messages_count != 0){
-	 $output .= '<b>Latest job offers:</b>';	
-		$output .= '<ul>';		
-		for($i=0; $i<$options['jobs_finder_widget_RSS_count_items'] && $i<$messages_count; $i++)
-		{			
-			$output .= '<li>';
-			$output .= '<a target="_blank" href="'.$messages->items[$i]['link'].'">'.$messages->items[$i]['title'].'</a></span>';						
-				$output .= '</li>';
-		}
-		$output .= '</ul>';
+
+$rss = fetch_feed( $feed );
+		if ( !is_wp_error( $rss ) ) :
+			$maxitems = $rss->get_item_quantity($options['jobs_finder_widget_RSS_count_items'] );
+			$items = $rss->get_items( 0, $maxitems );
+				endif;
+ $output .= '<b>Latest job offers:</b>';	
+	 $output .= '<ul>';	
+	if($items) { 
+ 			foreach ( $items as $item ) :
+				// Create post object
+  $titlee = trim($item->get_title()); 
+ $output .= '<li> <a href="';
+ $output .=  $item->get_permalink();
+  $output .= '"  title="'.$titlee.'" target="_blank">';
+$output .= $titlee.'</a></span>';		
+$output .= '</li>';
+	  		endforeach;		
 	}
-	
+			$output .= '</ul> ';	 			
 	extract($args);	
-	?>
-	<?php echo $before_widget; ?>
-	<?php echo $before_title . $title . $after_title; ?>	
-	<?php echo $output; ?>
-	<?php echo $after_widget; ?>
-	<?php	
+  echo $before_widget;  
+  echo $before_title . $title . $after_title;  
+ echo $output;  
+ echo $after_widget;  
 }
 
 
