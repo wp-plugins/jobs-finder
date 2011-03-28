@@ -14,7 +14,7 @@ Plugin "Jobs Finder" gives visitors the opportunity to more than 1 million offer
 Jobs search for U.S., Canada, UK, Australia. 
 Jobs Finder are saved on our database, so you don't need to have space for all that information. 
 
-<b>Try the Demo</b>
+<b>Try the Demo</b>                                                                                                                             
 
 If you're interested in seeing what a default installation of Jobs Finder has to offer, try out the <a target="_blank" href="http://www.greatjobcenter.com/">Jobs Finder</a>
 
@@ -34,6 +34,9 @@ If you're interested in seeing what a default installation of Jobs Finder has to
 Please see <a href="http://www.onlinerel.com/wordpress-plugins/">FAQ</a>.
 
 == Changelog ==
+
+ = 1.6.1 =
+ Updated feed address.
 
  = 1.6. =
  Tested upto 3.1 WP and fix bugs

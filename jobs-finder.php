@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Jobs Finder
-Version: 1.6
+Version: 1.6.1
 Plugin URI: http://www.onlinerel.com/wordpress-plugins/  
 Description: Plugin "Jobs Finder" gives visitors the opportunity to more than 1 million offer of employment.
 Jobs search for U.S., Canada, UK, Australia
@@ -16,10 +16,12 @@ define(jobs_finder_MAX_SHOWN_ITEMS, 6);
 function jobs_finder_widget_ShowRss($args)
 {
 	$options = get_option('jobs_finder_widget');
+	           
 	if( $options == false ) {
 		$options[ 'jobs_finder_widget_url_title' ] = jobs_finder_TITLE;
 		$options[ 'jobs_finder_widget_RSS_count_items' ] = jobs_finder_MAX_SHOWN_ITEMS;
 	}
+
 $feed = jobs_finder_URL_RSS_DEFAULT;
 $title = $options[ 'jobs_finder_widget_url_title' ];
 $output .= '<!-- Jobs Finder:  http://www.onlinerel.com/wordpress-plugins/ -->';
@@ -97,10 +99,13 @@ function jobs_finder_widget_Admin()
 }
 
 add_action('admin_menu', 'jobs_finder_menu');
+                    
 function jobs_finder_menu() {
 	add_options_page('Jobs Finder', 'Jobs Finder', 8, __FILE__, 'jobs_finder_options');
 }
+                                            
 add_filter("plugin_action_links", 'jobs_finder_ActionLink', 10, 2);
+                                                       
 function jobs_finder_ActionLink( $links, $file ) {
 	    static $this_plugin;		
 		if ( ! $this_plugin ) $this_plugin = plugin_basename(__FILE__); 
@@ -164,6 +169,6 @@ function jobs_finder_widget_Init()
 {
   register_sidebar_widget(__('Jobs Finder'), 'jobs_finder_widget_ShowRss');
   register_widget_control(__('Jobs Finder'), 'jobs_finder_widget_Admin', 500, 250);
-}
+}                                                                    
 add_action("plugins_loaded", "jobs_finder_widget_Init");
 ?>
