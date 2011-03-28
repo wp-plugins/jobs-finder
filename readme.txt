@@ -16,7 +16,7 @@ Jobs Finder are saved on our database, so you don't need to have space for all t
 
 <b>Try the Demo</b>
 
-If you're interested in seeing what a default installation of Jobs Finder has to offer, try out the <a target="_blank" href="http://jobs.onlinerel.com/">Jobs Finder</a>
+If you're interested in seeing what a default installation of Jobs Finder has to offer, try out the <a target="_blank" href="http://www.greatjobcenter.com/">Jobs Finder</a>
 
 
 == Installation ==
@@ -34,6 +34,9 @@ If you're interested in seeing what a default installation of Jobs Finder has to
 Please see <a href="http://www.onlinerel.com/wordpress-plugins/">FAQ</a>.
 
 == Changelog ==
+
+ = 1.6. =
+ Tested upto 3.1 WP and fix bugs
 
  = 1.5 =
 Updated feed system.                                                                                                                                     

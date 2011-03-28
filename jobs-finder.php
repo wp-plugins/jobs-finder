@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Jobs Finder
-Version: 1.5
+Version: 1.6
 Plugin URI: http://www.onlinerel.com/wordpress-plugins/  
 Description: Plugin "Jobs Finder" gives visitors the opportunity to more than 1 million offer of employment.
 Jobs search for U.S., Canada, UK, Australia
@@ -9,7 +9,7 @@ Author: A.Kilius
 Author URI: http://www.onlinerel.com/wordpress-plugins/
 */
 
-define(jobs_finder_URL_RSS_DEFAULT, 'http://jobs.onlinerel.com/category/jobs/feed/');
+define(jobs_finder_URL_RSS_DEFAULT, 'http://www.greatjobcenter.com/category/jobs/feed/');
 define(jobs_finder_TITLE, 'Jobs Finder');
 define(jobs_finder_MAX_SHOWN_ITEMS, 6);
 
@@ -20,11 +20,10 @@ function jobs_finder_widget_ShowRss($args)
 		$options[ 'jobs_finder_widget_url_title' ] = jobs_finder_TITLE;
 		$options[ 'jobs_finder_widget_RSS_count_items' ] = jobs_finder_MAX_SHOWN_ITEMS;
 	}
-
 $feed = jobs_finder_URL_RSS_DEFAULT;
-		$title = $options[ 'jobs_finder_widget_url_title' ];
-$output = '<!-- Jobs Finder:  http://www.onlinerel.com/wordpress-plugins/ -->';
-$output .= '<form name="forma" method="post" action="http://jobs.onlinerel.com/jobs-search/" target="_blank">
+$title = $options[ 'jobs_finder_widget_url_title' ];
+$output .= '<!-- Jobs Finder:  http://www.onlinerel.com/wordpress-plugins/ -->';
+$output .= '<form name="forma" method="post" action="http://www.greatjobcenter.com/jobs-search/" target="_blank">
 <b>Country: </b>
 <select name="country" id="country" style="width:150px;">
 <option value="USA"  >USA</option>
@@ -32,8 +31,7 @@ $output .= '<form name="forma" method="post" action="http://jobs.onlinerel.com/j
 <option value="UK"  >UK</option>
 <option value="Australia">Australia</option>';
 $output .= '
-</select>
-<br /><b>Location:</b><br />  
+</select><br /><b>Location:</b><br />  
  <input type="text" style="width:160px;"  name="location"  onClick=\' if (this.value == "City, County, State, Zip") this.value="";\'  value="';
  $output .= 'City, County, State, Zip';
 $output .= '" /> <br />
@@ -70,7 +68,6 @@ $output .= '</li>';
  echo $after_widget;  
 }
 
-
 function jobs_finder_widget_Admin()
 {
 	$options = $newoptions = get_option('jobs_finder_widget');	
@@ -89,14 +86,10 @@ function jobs_finder_widget_Admin()
 		update_option('jobs_finder_widget', $options);		
 	}
 	$jobs_finder_widget_url_title = wp_specialchars($options['jobs_finder_widget_url_title']);
-	$jobs_finder_widget_RSS_count_items = $options['jobs_finder_widget_RSS_count_items'];
-	
+	$jobs_finder_widget_RSS_count_items = $options['jobs_finder_widget_RSS_count_items'];	
 	?><form method="post" action="">	
-
-	<p><label for="jobs_finder_widget_url_title"><?php _e('Title:'); ?> <input style="width: 350px;" id="jobs_finder_widget_url_title" name="jobs_finder_widget_url_title" type="text" value="<?php echo $jobs_finder_widget_url_title; ?>" /></label></p>
- 
-	<p><label for="jobs_finder_widget_RSS_count_items"><?php _e('Count Items To Show:'); ?> <input  id="jobs_finder_widget_RSS_count_items" name="jobs_finder_widget_RSS_count_items" size="2" maxlength="2" type="text" value="<?php echo $jobs_finder_widget_RSS_count_items?>" /></label></p>
-	
+	<p><label for="jobs_finder_widget_url_title"><?php _e('Title:'); ?> <input style="width: 350px;" id="jobs_finder_widget_url_title" name="jobs_finder_widget_url_title" type="text" value="<?php echo $jobs_finder_widget_url_title; ?>" /></label></p> 
+	<p><label for="jobs_finder_widget_RSS_count_items"><?php _e('Count Items To Show:'); ?> <input  id="jobs_finder_widget_RSS_count_items" name="jobs_finder_widget_RSS_count_items" size="2" maxlength="2" type="text" value="<?php echo $jobs_finder_widget_RSS_count_items?>" /></label></p>	
 	<br clear='all'></p>
 	<input type="hidden" id="jobs_finder_widget-submit" name="jobs_finder_widget-submit" value="1" />	
 	</form>
@@ -107,7 +100,6 @@ add_action('admin_menu', 'jobs_finder_menu');
 function jobs_finder_menu() {
 	add_options_page('Jobs Finder', 'Jobs Finder', 8, __FILE__, 'jobs_finder_options');
 }
-
 add_filter("plugin_action_links", 'jobs_finder_ActionLink', 10, 2);
 function jobs_finder_ActionLink( $links, $file ) {
 	    static $this_plugin;		
@@ -161,14 +153,12 @@ Add Funny YouTube videos to your sidebar on your blog using  a widget.</b> </p>
 <p>Advertise your real estate, cars, items... Buy, Sell, Rent. Free promote your site:
 <ul>
 	<li><a target="_blank" href="http://www.onlinerel.com/">OnlineRel</a></li>
-	<li><a target="_blank" href="http://www.easyfreeads.com/">Easy Free Ads</a></li>
+	<li><a target="_blank" href="http://www.homeshopworld.com/">Home Shop World</a></li>
 	<li><a target="_blank" href="http://www.worldestatesite.com/">World Estate Site, Sell your Home, Search Homes</a></li>
 </ul>
 <h3>Get plugin <a target="_blank" href="http://wordpress.org/extend/plugins/wp-social-bookmarking/">WP Social Bookmarking</h3></a>
-</p>
- 	</div>
-	<?php
-}
+</p> 	</div>
+	<?php  }
 
 function jobs_finder_widget_Init()
 {
