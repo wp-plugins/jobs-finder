@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Jobs Finder
-Version: 1.6.1
+Version: 1.7
 Plugin URI: http://www.onlinerel.com/wordpress-plugins/  
 Description: Plugin "Jobs Finder" gives visitors the opportunity to more than 1 million offer of employment.
 Jobs search for U.S., Canada, UK, Australia
@@ -12,6 +12,7 @@ Author URI: http://www.onlinerel.com/wordpress-plugins/
 define(jobs_finder_URL_RSS_DEFAULT, 'http://www.greatjobcenter.com/category/jobs/feed/');
 define(jobs_finder_TITLE, 'Jobs Finder');
 define(jobs_finder_MAX_SHOWN_ITEMS, 6);
+                                                                                           
 
 function jobs_finder_widget_ShowRss($args)
 {
@@ -21,6 +22,7 @@ function jobs_finder_widget_ShowRss($args)
 		$options[ 'jobs_finder_widget_url_title' ] = jobs_finder_TITLE;
 		$options[ 'jobs_finder_widget_RSS_count_items' ] = jobs_finder_MAX_SHOWN_ITEMS;
 	}
+                                            
 
 $feed = jobs_finder_URL_RSS_DEFAULT;
 $title = $options[ 'jobs_finder_widget_url_title' ];
@@ -62,7 +64,7 @@ $output .= $titlee.'</a></span>';
 $output .= '</li>';
 	  		endforeach;		
 	}
-			$output .= '</ul> ';	 			
+ $output .= '</ul> ';	 			
 	extract($args);	
   echo $before_widget;  
   echo $before_title . $title . $after_title;  
@@ -82,7 +84,8 @@ function jobs_finder_widget_Admin()
 		$newoptions['jobs_finder_widget_url_title'] = strip_tags(stripslashes($_POST["jobs_finder_widget_url_title"]));
 		$newoptions['jobs_finder_widget_RSS_count_items'] = strip_tags(stripslashes($_POST["jobs_finder_widget_RSS_count_items"]));
 	}	
-		
+	                                                                                                  
+
 	if ( $options != $newoptions ) {
 		$options = $newoptions;
 		update_option('jobs_finder_widget', $options);		
@@ -119,7 +122,8 @@ function jobs_finder_ActionLink( $links, $file ) {
 function jobs_finder_options() {	
 	?>
 	<div class="wrap">
-		<h2>Jobs Finder</h2>
+		<h2>Jobs Finder</h2>                                                               
+
 <p><b>Plugin "Jobs Finder" gives visitors the opportunity to more than 1 million offer of employment.
 Jobs search for U.S., Canada, UK, Australia</b> </p>
 <p> <h3>Add the widget "Jobs Finder"  to your sidebar from  <a href="<? echo "./widgets.php";?>"> Appearance->Widgets</a>  and configure the widget options.</h3></p>
@@ -129,7 +133,8 @@ Jobs search for U.S., Canada, UK, Australia</b> </p>
 Idea is simple - the more traffic you send to us, the more we can send you back.</b> </p>
  <h3>Get plugin <a target="_blank" href="http://wordpress.org/extend/plugins/blog-promotion/">Blog Promotion</h3></a> 
  <hr />
- <h2>Real Estate Finder</h2>
+ <h2>Real Estate Finder</h2>                                                                                                      
+
 <p><b>Plugin "Real Estate Finder" gives visitors the opportunity to use a large database of real estate.
 Real estate search for U.S., Canada, UK, Australia</b> </p>
 <h3>Get plugin <a target="_blank" href="http://wordpress.org/extend/plugins/real-estate-finder/">Real Estate Finder</h3></a>
@@ -164,7 +169,6 @@ Add Funny YouTube videos to your sidebar on your blog using  a widget.</b> </p>
 <h3>Get plugin <a target="_blank" href="http://wordpress.org/extend/plugins/wp-social-bookmarking/">WP Social Bookmarking</h3></a>
 </p> 	</div>
 	<?php  }
-
 function jobs_finder_widget_Init()
 {
   register_sidebar_widget(__('Jobs Finder'), 'jobs_finder_widget_ShowRss');
