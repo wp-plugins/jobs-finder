@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Jobs Finder
-Version: 1.7.1
+Version: 1.7.2
 Plugin URI: http://www.onlinerel.com/wordpress-plugins/  
 Description: Plugin "Jobs Finder" gives visitors the opportunity to more than one million offer of employment.
 Jobs search for U.S., Canada, UK, Australia
@@ -43,7 +43,11 @@ $output .= '" /> <br />
 <input type="text" name="q" style="width:160px;" onClick=\' if (this.value == "Job type, Company, Category") this.value="";\'  value="';
  $output .= 'Job type, Company, Category';
 $output .= '" /> <br />
-<center><input type="submit" name="submit" class="submit" value="Search" /></center> </form><br />';
+<center><input type="submit" name="submit" class="submit" value="Search" />
+</center> 
+</form>
+
+                                                                                                                                                                  <br /> ';
 // end search form
 
 $rss = fetch_feed( $feed );
