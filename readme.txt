@@ -31,14 +31,13 @@ If you're interested in seeing what a default installation of Jobs Finder has to
 
 2. Jobs Finder Widget in Admin panel
 
-
 == Frequently Asked Questions ==
 
 Please see <a href="http://www.onlinerel.com/wordpress-plugins/">FAQ</a>.
 
 == Changelog ==
 
- = 1.7.2 =
+ = 1.7.3 =
  Fix bugs.
  Add more Screenshots
 
