@@ -27,7 +27,9 @@ If you're interested in seeing what a default installation of Jobs Finder has to
 
 == Screenshots ==
 
-1. Jobs Finder Widget
+1. Jobs Finder Widget on a website
+
+2. Jobs Finder Widget in Admin panel
 
 == Frequently Asked Questions ==
 
@@ -35,8 +37,9 @@ Please see <a href="http://www.onlinerel.com/wordpress-plugins/">FAQ</a>.
 
 == Changelog ==
 
- = 1.7 =
+ = 1.7.1 =
  Fix bugs.
+ Add more Screenshots
 
  = 1.6.1 =
  Updated feed address.
