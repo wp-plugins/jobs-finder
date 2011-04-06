@@ -37,7 +37,7 @@ Please see <a href="http://www.onlinerel.com/wordpress-plugins/">FAQ</a>.
 
 == Changelog ==
 
- = 1.7.3 =
+ = 1.7.4 =
  Fix bugs.
  Add more Screenshots
 
@@ -64,3 +64,8 @@ Changed works upto 3.0.3 WP
 
   = 1.0 =  
  First stable version.
+
+  == Upgrade Notice ==
+  
+ = 1.7.4 =
+Automatically upgrade the plugin and all previous settings should remain intact.
