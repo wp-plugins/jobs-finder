@@ -28,7 +28,6 @@ If you're interested in seeing what a default installation of Jobs Finder has to
 == Screenshots ==
 
 1. Jobs Finder Widget on a website
-
 2. Jobs Finder Widget in Admin panel
 
 == Frequently Asked Questions ==
