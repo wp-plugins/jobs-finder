@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Jobs Finder
-Version: 1.7.4
+Version: 1.8
 Plugin URI: http://www.onlinerel.com/wordpress-plugins/  
 Description: Plugin "Jobs Finder" gives visitors the opportunity to more than one million offer of employment.  Jobs search for U.S., Canada, UK, Australia
 Author: A.Kilius
@@ -21,8 +21,7 @@ function jobs_finder_widget_ShowRss($args)
 		$options[ 'jobs_finder_widget_url_title' ] = jobs_finder_TITLE;
 		$options[ 'jobs_finder_widget_RSS_count_items' ] = jobs_finder_MAX_SHOWN_ITEMS;
 	}
-                                            
-
+    
 $feed = jobs_finder_URL_RSS_DEFAULT;
 $title = $options[ 'jobs_finder_widget_url_title' ];
 $output .= '<!-- Jobs Finder:  http://www.onlinerel.com/wordpress-plugins/ -->';
@@ -129,17 +128,18 @@ function jobs_finder_options() {
 Jobs search for U.S., Canada, UK, Australia</b> </p>
 <p> <h3>Add the widget "Jobs Finder"  to your sidebar from  <a href="<? echo "./widgets.php";?>"> Appearance->Widgets</a>  and configure the widget options.</h3></p>
  <hr /> <hr />
+                                 
+  <h2>Real Estate Finder</h2>        
+<p><b>Plugin "Real Estate Finder" gives visitors the opportunity to use a large database of real estate.
+Real estate search for U.S., Canada, UK, Australia</b> </p>
+<h3>Get plugin <a target="_blank" href="http://wordpress.org/extend/plugins/real-estate-finder/">Real Estate Finder</h3></a>
+ <hr /> 	
  <h2>Blog Promotion</h2>
 <p><b>If you produce original news or entertainment content, you can tap into one of the most technologically advanced traffic exchanges among blogs! Start using our Blog Promotion plugin on your site and receive 150%-300% extra traffic free! 
 Idea is simple - the more traffic you send to us, the more we can send you back.</b> </p>
  <h3>Get plugin <a target="_blank" href="http://wordpress.org/extend/plugins/blog-promotion/">Blog Promotion</h3></a> 
  <hr />
- <h2>Real Estate Finder</h2>                                                                                                      
 
-<p><b>Plugin "Real Estate Finder" gives visitors the opportunity to use a large database of real estate.
-Real estate search for U.S., Canada, UK, Australia</b> </p>
-<h3>Get plugin <a target="_blank" href="http://wordpress.org/extend/plugins/real-estate-finder/">Real Estate Finder</h3></a>
- <hr /> 	
    <h2>Funny photos</h2>
 <p><b>Plugin "Funny Photos" displays Best photos of the day and Funny photos on your blog. There are over 5,000 photos.
 Add Funny Photos to your sidebar on your blog using  a widget.</b> </p>
