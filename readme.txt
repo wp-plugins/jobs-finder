@@ -3,7 +3,7 @@ Contributors: allis741
 Donate link: http://www.onlinerel.com/wordpress-plugins/
 Tags: widget, job vacancies, sidebar, employment, jobs, job, career, work from home, promote, SEO, feed, rss, popular
 Requires at least: 2.5
-Tested up to: 3.1.1
+Tested up to: 3.1.3
 Stable tag: trunk
 
 Plugin "Jobs Finder" gives visitors the opportunity to more than 1 million offer of employment. Jobs search for U.S., Canada, UK, Australia
@@ -36,13 +36,18 @@ Please see <a href="http://www.onlinerel.com/wordpress-plugins/">FAQ</a>.
 
 == Changelog ==
    
+= 1.9 =
+
+Fixed bugs in widget
+Tested up to 3.1.3 version WP
+
 = 1.8 =
 
 Updated   system 
 Tested up to 3.1.1 version WP
 
 
- = 1.7.4 =
+= 1.7.4 =
 
  Fix bugs.
  Add more Screenshots
@@ -80,7 +85,13 @@ Changed works upto 3.0.3 WP
  First stable version.
 
 == Upgrade Notice ==
-  
+
+= 1.9 =
+
+Automatically upgrade the plugin and all previous settings should remain intact. 
+Fixed bugs in widget
+Tested up to 3.1.3 version WP
+
 = 1.8 =
 
 Automatically upgrade the plugin and all previous settings should remain intact.

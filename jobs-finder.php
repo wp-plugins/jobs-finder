@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Jobs Finder
-Version: 1.8
+Version: 1.9
 Plugin URI: http://www.onlinerel.com/wordpress-plugins/  
 Description: Plugin "Jobs Finder" gives visitors the opportunity to more than one million offer of employment.  Jobs search for U.S., Canada, UK, Australia
 Author: A.Kilius
@@ -32,17 +32,15 @@ $output .= '<form name="forma" method="post" action="http://www.greatjobcenter.c
 <option value="Canada"  >Canada</option>
 <option value="UK"  >UK</option>
 <option value="Australia">Australia</option>';
-$output .= '
-</select><br /><b>Location:</b><br />  
- <input type="text" style="width:160px;"  name="location"  onClick=\' if (this.value == "City, County, State, Zip") this.value="";\'  value="';
- $output .= 'City, County, State, Zip';
-$output .= '" /> <br />
-<b>Job:</b><br />
+ $output .= '</select><br />';
+//$output .= '<b>Location:</b><br />   <input type="text" style="width:160px;"  name="location"  onClick=\' if (this.value == "City, County, State, Zip") this.value="";\'  value="';
+// $output .= 'City, County, State, Zip';
+//$output .= '" /> <br />';
+$output .= '<b>Job:</b><br />
 <input type="text" name="q" style="width:160px;" onClick=\' if (this.value == "Job type, Company, Category") this.value="";\'  value="';
  $output .= 'Job type, Company, Category';
 $output .= '" /> <br />
-<center><input type="submit" name="submit" class="submit" value="Search" />
-</center> 
+<center> <input type="submit" name="submit" class="submit" value="Search" /></center> 
 </form>  <br /> ';
 // end search form
 
@@ -64,7 +62,10 @@ $output .= $titlee.'</a></span>';
 $output .= '</li>';
 	  		endforeach;		
 	}
- $output .= '</ul> ';	 			
+ $output .= '</ul><center>
+ <form name="forma" method="post" action="http://www.greatjobcenter.com/post-a-job/" target="_blank" >
+ <input type="submit" name="submit" class="submit" value="Post a Job" /></form> 
+</center> ';	 			
 	extract($args);	
   echo $before_widget;  
   echo $before_title . $title . $after_title;  
@@ -80,7 +81,7 @@ function jobs_finder_widget_Admin()
 		$newoptions[ 'jobs_finder_widget_url_title' ] = jobs_finder_TITLE;
 		$newoptions['jobs_finder_widget_RSS_count_items'] = jobs_finder_MAX_SHOWN_ITEMS;		
 	}
-	if ( $_POST["jobs_finder_widget-submit"] ) {
+	if ( $_POST["jobs_finder_widget_RSS_count_items"] ) {
 		$newoptions['jobs_finder_widget_url_title'] = strip_tags(stripslashes($_POST["jobs_finder_widget_url_title"]));
 		$newoptions['jobs_finder_widget_RSS_count_items'] = strip_tags(stripslashes($_POST["jobs_finder_widget_RSS_count_items"]));
 	}	
@@ -92,12 +93,12 @@ function jobs_finder_widget_Admin()
 	}
 	$jobs_finder_widget_url_title = wp_specialchars($options['jobs_finder_widget_url_title']);
 	$jobs_finder_widget_RSS_count_items = $options['jobs_finder_widget_RSS_count_items'];	
-	?><form method="post" action="">	
+	?>
 	<p><label for="jobs_finder_widget_url_title"><?php _e('Title:'); ?> <input style="width: 350px;" id="jobs_finder_widget_url_title" name="jobs_finder_widget_url_title" type="text" value="<?php echo $jobs_finder_widget_url_title; ?>" /></label></p> 
 	<p><label for="jobs_finder_widget_RSS_count_items"><?php _e('Count Items To Show:'); ?> <input  id="jobs_finder_widget_RSS_count_items" name="jobs_finder_widget_RSS_count_items" size="2" maxlength="2" type="text" value="<?php echo $jobs_finder_widget_RSS_count_items?>" /></label></p>	
 	<br clear='all'></p>
-	<input type="hidden" id="jobs_finder_widget-submit" name="jobs_finder_widget-submit" value="1" />	
-	</form>
+ 
+
 	<?php
 }
 
