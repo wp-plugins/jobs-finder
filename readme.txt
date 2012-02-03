@@ -13,13 +13,8 @@ Plugin "Jobs Finder" gives visitors the opportunity to more than 1 million offer
 Plugin "Jobs Finder" gives visitors the opportunity to more than 1 million offer of employment.
 Jobs search for U.S., Canada, UK, Australia. 
 Jobs Finder are saved on our database, so you don't need to have space for all that information. 
-
-<b>Try the Demo</b>                                                                                                                             
-
-If you're interested in seeing what a default installation of Jobs Finder has to offer, try out the <a target="_blank" href="http://www.howfindajob.com/">Jobs Finder</a>
-
-
-== Installation ==
+ 
+ == Installation ==
 
 1. Upload the folder jobs-finder to the /wp-content/plugins/ directory
 2. Activate the plugin Jobs Finder through the 'Plugins' menu in WordPress
@@ -29,11 +24,7 @@ If you're interested in seeing what a default installation of Jobs Finder has to
 
 1. Jobs Finder Widget on a website
 2. Jobs Finder Widget in Admin panel
-
-== Frequently Asked Questions ==
-
-Please see <a href="http://www.onlinerel.com/wordpress-plugins/">FAQ</a>.
-
+ 
 == Changelog ==
    
 = 2.0 =
