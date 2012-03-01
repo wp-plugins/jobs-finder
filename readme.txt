@@ -1,17 +1,17 @@
 === Jobs Finder ===
 Contributors: allis741 
 Donate link: http://www.onlinerel.com/wordpress-plugins/
-Tags: widget, job vacancies, sidebar, employment, jobs, job, career, work from home, promote, SEO, feed, rss, popular
+Tags: job vacancies, employment, jobs, job, career, work from home, promote, feed, rss, widget, sidebar
 Requires at least: 2.5
 Tested up to: 3.3.1
 Stable tag: trunk
 
-Plugin "Jobs Finder" gives visitors the opportunity to more than 1 million offer of employment. Jobs search for U.S., Canada, UK, Australia
+Plugin "Jobs Finder" gives visitors the opportunity to more than 1 million offer of employment. Jobs search for U.S., UK, Canada, Australia
  
 == Description ==
 
 Plugin "Jobs Finder" gives visitors the opportunity to more than 1 million offer of employment.
-Jobs search for U.S., Canada, UK, Australia. 
+Jobs search for U.S., UK,  Canada, Australia. 
 Jobs Finder are saved on our database, so you don't need to have space for all that information. 
  
  == Installation ==
@@ -27,49 +27,46 @@ Jobs Finder are saved on our database, so you don't need to have space for all t
  
 == Changelog ==
    
+= 2.1 =
+
+* Updated script
+* Add more Screenshots
+
 = 2.0 =
 
-Tested up to 3.3.1 WP     
-Updated script
+* Tested up to 3.3.1 WP     
+* Updated script
 
 = 1.9 =
 
-Fixed bugs in widget
-Tested up to 3.1.3 version WP
+* Fixed bugs in widget
+* Tested up to 3.1.3 version WP
 
 = 1.8 =
 
-Updated   system 
-Tested up to 3.1.1 version WP
+* Updated   system 
+* Tested up to 3.1.1 version WP
 
 = 1.7.4 =
 
- Fix bugs.
- Add more Screenshots
-
- = 1.6.1 =
-
- Updated feed address.
+ * Fix bugs.
+ * Add more Screenshots
 
  = 1.6 =
 
- Tested upto 3.1 WP and fix bugs
+ * Tested upto 3.1 WP and fix bugs
 
  = 1.5 =
 
-Updated feed system.                                                                                                                                     
+* Updated feed system.                                                                                                                                     
 
  = 1.4 =
             
-Updated feed address.  
-
- = 1.3.1 = 
-
-Changed works upto 3.0.3 WP 
+* Updated feed address.  
 
  = 1.2 =
 
- Fix bugs.
+* Fix bugs.
 
 = 1.1 =  
 
@@ -77,5 +74,5 @@ Changed works upto 3.0.3 WP
 
 = 1.0 =  
 
- First stable version.
+ * First stable version.
  
