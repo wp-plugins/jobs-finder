@@ -6,12 +6,12 @@ Requires at least: 2.5
 Tested up to: 3.3.1
 Stable tag: trunk
 
-Plugin "Jobs Finder" gives visitors the opportunity to more than 1 million offer of employment. Jobs search for U.S., UK, Canada, Australia
+Plugin "Jobs Finder" gives visitors the opportunity to more than 1 million offer of employment. Jobs search for USA, UK, Canada, Australia
  
 == Description ==
 
 Plugin "Jobs Finder" gives visitors the opportunity to more than 1 million offer of employment.
-Jobs search for U.S., UK,  Canada, Australia. 
+Jobs search for USA, UK,  Canada, Australia. 
 Jobs Finder are saved on our database, so you don't need to have space for all that information. 
  
  == Installation ==
@@ -47,7 +47,7 @@ Jobs Finder are saved on our database, so you don't need to have space for all t
 * Updated   system 
 * Tested up to 3.1.1 version WP
 
-= 1.7.4 =
+= 1.7 =
 
  * Fix bugs.
  * Add more Screenshots
